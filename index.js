@@ -25,6 +25,7 @@ class Neighborhood {
     var temp = []
     return this.deliveries().map(delivery => {
       return delivery.meal()}).filter(function(meal) {
+        console.log(temp.indexOf(meal.id))
       return temp.indexOf(meal.id) == -1 && temp.push(meal.id)
     })
   }
